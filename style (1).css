@@ -1,0 +1,287 @@
+:root {
+  --navy: #1b2a52;
+  --blue: #2b3a9e;
+  --paper: #f5f6f9;
+  --ink: #2a2f3a;
+  --muted: #5a6070;
+  --rule: #d5d9e4;
+  --gold: #e3b341;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header: name set in the same serif as the CV */
+.header {
+  background: var(--navy);
+  color: #fff;
+  padding: 90px 0 56px;
+  border-bottom: 4px solid var(--gold);
+}
+
+.header h1 {
+  font-family: "Times New Roman", Times, Georgia, serif;
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  margin-bottom: 14px;
+}
+
+.header .role {
+  font-size: 1.15rem;
+}
+
+.header .tagline {
+  margin-top: 6px;
+  color: #c5cdea;
+}
+
+.header .meta {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  color: #9fabd6;
+}
+
+.navbar {
+  background: #111a36;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  display: block;
+  color: #dfe4f5;
+  text-decoration: none;
+  padding: 14px 16px;
+  font-size: 0.95rem;
+  border-bottom: 3px solid transparent;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background: rgba(255, 255, 255, 0.08);
+  border-bottom-color: var(--gold);
+  color: #fff;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.section {
+  padding: 56px 0 24px;
+}
+
+.section h2 {
+  font-family: "Times New Roman", Times, Georgia, serif;
+  font-size: 1.9rem;
+  color: var(--blue);
+  border-bottom: 1px solid var(--navy);
+  width: 100%;
+  padding-bottom: 6px;
+  margin-bottom: 24px;
+}
+
+.section p {
+  font-size: 1.05rem;
+  color: var(--muted);
+  max-width: 75ch;
+}
+
+.section p + p {
+  margin-top: 14px;
+}
+
+.date {
+  font-family: "Times New Roman", Times, Georgia, serif;
+  font-style: italic;
+  color: var(--blue);
+  white-space: nowrap;
+}
+
+/* Experience and education entries */
+.job {
+  margin-bottom: 36px;
+}
+
+.job-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.job-head h3 {
+  font-size: 1.1rem;
+  color: var(--navy);
+}
+
+.org {
+  display: block;
+  font-weight: 400;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.job ul,
+.plain-list {
+  margin-left: 20px;
+  color: var(--muted);
+}
+
+.job li,
+.plain-list li {
+  margin-bottom: 7px;
+  padding-left: 4px;
+}
+
+.job li::marker,
+.plain-list li::marker {
+  color: var(--blue);
+}
+
+strong {
+  color: var(--ink);
+}
+
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.skill-card {
+  background: #fff;
+  padding: 20px 22px;
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--blue);
+  border-radius: 4px;
+}
+
+.skill-card h3 {
+  color: var(--navy);
+  font-size: 1.02rem;
+  margin-bottom: 6px;
+}
+
+.skill-card p {
+  font-size: 0.97rem;
+}
+
+/* Projects */
+.project-list {
+  display: grid;
+  gap: 22px;
+}
+
+.project h3 {
+  font-size: 1.08rem;
+  color: var(--navy);
+}
+
+.tool {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 1px 9px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--blue);
+  background: #e4e8f7;
+  border-radius: 20px;
+  vertical-align: middle;
+}
+
+.project .date {
+  display: block;
+  font-size: 0.95rem;
+  margin: 2px 0 6px;
+}
+
+/* Contact */
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.contact-button {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 4px;
+  background: var(--navy);
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.contact-button:hover {
+  background: var(--blue);
+}
+
+.footer {
+  margin-top: 56px;
+  background: #111a36;
+  color: #c5cdea;
+  text-align: center;
+  padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding-top: 60px;
+  }
+
+  .job-head {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .contact-links {
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
+  }
+}
